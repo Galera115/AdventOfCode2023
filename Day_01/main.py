@@ -1,4 +1,4 @@
-from re import findall
+import regex as re
 
 
 def read_input(file):
@@ -10,7 +10,7 @@ def read_input(file):
 def get_numbers(line):
     digits_letters = ['one', 'two', 'three', 'four', 'five',
                       'six', 'seven', 'eight', 'nine']
-    all_numbers = findall(r'\d|' + r'|'.join(digits_letters), line)
+    all_numbers = re.findall(r'\d|' + r'|'.join(digits_letters), line, overlapped=True)
     for number in all_numbers:
         if number in digits_letters:
             all_numbers[all_numbers.index(number)] = digits_letters.index(number) + 1
