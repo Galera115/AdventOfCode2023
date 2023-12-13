@@ -22,7 +22,7 @@ def search_numbers(grid, i, j):
         if grid[(i-1, j+1)].isnumeric():
             sum = search_in_right(grid, i-1, j, sum)
     elif grid[(i-1, j-1)].isnumeric():
-        sum = int(grid[(i-1,j-1)]) + search_in_left(grid, i-1, j-1) * 10
+        sum = int(grid[(i-1, j-1)]) + search_in_left(grid, i-1, j-1) * 10
     if grid[(i-1, j+1)].isnumeric() and not grid[(i-1, j)].isnumeric():
         num = int(grid[(i-1, j+1)])
         if grid[(i-1, j+2)].isnumeric():
