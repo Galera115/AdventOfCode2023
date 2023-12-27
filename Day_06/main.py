@@ -1,5 +1,4 @@
 import re
-from tqdm import tqdm
 from functools import reduce
 
 
@@ -21,6 +20,7 @@ def parte_uno(times, distances):
                 pos_sol += 1
         posibles_sol_part_1.append(pos_sol)
     return posibles_sol_part_1
+
 
 if __name__ == '__main__':
     times, distances = get_time_and_distances('input.txt')
